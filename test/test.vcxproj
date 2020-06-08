@@ -134,24 +134,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Collision.cpp" />
-    <ClCompile Include="Engine.cpp" />
-    <ClCompile Include="Graphics.cpp" />
-    <ClCompile Include="Input.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Object.cpp" />
-    <ClCompile Include="ObjectManager.cpp" />
-    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="Src\Engine\Engine.cpp" />
+    <ClCompile Include="Src\Engine\Graphics.cpp" />
+    <ClCompile Include="Src\Engine\Input.cpp" />
+    <ClCompile Include="Src\Engine\Window.cpp" />
+    <ClCompile Include="Src\main.cpp" />
+    <ClCompile Include="Src\Object\Object.cpp" />
+    <ClCompile Include="Src\Object\ObjectManager.cpp" />
+    <ClCompile Include="Src\Utility\Collision.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Collision.h" />
-    <ClInclude Include="Engine.h" />
-    <ClInclude Include="Graphics.h" />
-    <ClInclude Include="Input.h" />
-    <ClInclude Include="Object.h" />
-    <ClInclude Include="ObjectManager.h" />
-    <ClInclude Include="Vec.h" />
-    <ClInclude Include="Window.h" />
+    <ClInclude Include="Src\Engine\Engine.h" />
+    <ClInclude Include="Src\Engine\Graphics.h" />
+    <ClInclude Include="Src\Engine\Input.h" />
+    <ClInclude Include="Src\Engine\Window.h" />
+    <ClInclude Include="Src\Object\Object.h" />
+    <ClInclude Include="Src\Object\ObjectManager.h" />
+    <ClInclude Include="Src\Utility\Collision.h" />
+    <ClInclude Include="Src\Utility\Vec.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Enemy.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

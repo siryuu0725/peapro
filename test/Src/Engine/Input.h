@@ -3,7 +3,7 @@
 
 #include <Windows.h>
 #include <dinput.h>
-#include "Vec.h"
+#include "../Utility/Vec.h"
 
 /** @brief マウスボタンの種類 */
 enum MouseButton

@@ -15,55 +15,60 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Window.cpp">
+    <ClCompile Include="Src\Engine\Engine.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Engine.cpp">
+    <ClCompile Include="Src\Engine\Graphics.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Graphics.cpp">
+    <ClCompile Include="Src\Engine\Input.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Input.cpp">
+    <ClCompile Include="Src\Engine\Window.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="Src\Object\Object.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Object.cpp">
+    <ClCompile Include="Src\Object\ObjectManager.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="ObjectManager.cpp">
+    <ClCompile Include="Src\Utility\Collision.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Collision.cpp">
+    <ClCompile Include="Src\main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Window.h">
-      <Filter>ソース ファイル</Filter>
+    <ClInclude Include="Src\Engine\Engine.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Engine.h">
-      <Filter>ソース ファイル</Filter>
+    <ClInclude Include="Src\Engine\Graphics.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Graphics.h">
-      <Filter>ソース ファイル</Filter>
+    <ClInclude Include="Src\Engine\Input.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>ソース ファイル</Filter>
+    <ClInclude Include="Src\Engine\Window.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Object.h">
-      <Filter>ソース ファイル</Filter>
+    <ClInclude Include="Src\Object\Object.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="ObjectManager.h">
-      <Filter>ソース ファイル</Filter>
+    <ClInclude Include="Src\Object\ObjectManager.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Vec.h">
-      <Filter>ソース ファイル</Filter>
+    <ClInclude Include="Src\Utility\Collision.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Collision.h">
-      <Filter>ソース ファイル</Filter>
+    <ClInclude Include="Src\Utility\Vec.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Enemy.png">
+      <Filter>リソース ファイル</Filter>
+    </Image>
   </ItemGroup>
 </Project>

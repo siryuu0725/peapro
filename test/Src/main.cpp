@@ -1,10 +1,10 @@
 #include <Windows.h>
-#include "Window.h"
-#include "Graphics.h"
+#include "Engine/Window.h"
+#include "Engine/Graphics.h"
 #include <thread>
-#include "Engine.h"
-#include "ObjectManager.h"
-#include "Input.h"
+#include "Engine/Engine.h"
+#include "Object/ObjectManager.h"
+#include "Engine/Input.h"
 
 int WINAPI WinMain(HINSTANCE hinstance,
 	HINSTANCE hPrevInstance,

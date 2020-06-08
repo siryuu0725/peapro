@@ -3,8 +3,15 @@
 
 #include <d3d9.h>
 #include <d3dx9.h>
-#include "Graphics.h"
-#include "Collision.h"
+#include "../Engine/Graphics.h"
+#include "../Utility/Collision.h"
+
+enum class State {
+	WAIT,
+	MOVE,
+	CHASE,
+	STATE_MAX_NUM
+};
 
 class Object
 {
@@ -22,8 +29,10 @@ private:
 		TEXTURE_DATA tex;
 
 		int wait_conter;
-
-	}Object_info;
+		
+		// ’Ç‰Á
+		State state;
+	}m_obj_info;
 
 public:
 	void Load();

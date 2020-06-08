@@ -2,7 +2,7 @@
 #include "Input.h"
 #include <Windows.h>
 #include <dinput.h>
-#include "Vec.h"
+#include "../Utility/Vec.h"
 #include "Window.h"
 //#include "DirectX.h"
 
