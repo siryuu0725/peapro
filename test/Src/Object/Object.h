@@ -6,7 +6,7 @@
 #include "../Engine/Graphics.h"
 #include "../Utility/Collision.h"
 #include "../Data/GameData.h"
-
+#include "../State/State.h"
 
 class Object
 {
@@ -29,7 +29,7 @@ private:
 		float move_speed;
 		
 		// ’Ç‰Á
-		State state;
+		OldState state;
 	}m_obj_info;
 
 public:
@@ -49,5 +49,6 @@ public:
 	void StateUpdate();
 private:
 	Collision* m_collision;
+	State* m_state;
 };
 #endif
