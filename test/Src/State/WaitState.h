@@ -1,6 +1,5 @@
 #pragma once
 #include "State.h"
-#include "../Object/Object.h"
 
 class WaitState :
 	public State

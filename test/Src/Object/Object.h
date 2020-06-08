@@ -8,6 +8,8 @@
 #include "../Data/GameData.h"
 #include "../State/State.h"
 
+class State;
+
 class Object
 {
 public:

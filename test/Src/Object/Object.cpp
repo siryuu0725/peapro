@@ -42,10 +42,11 @@ void Object::Draw()
 void Object::Update()
 {
 
-	StateChange();
+	//StateChange();
 
-	StateUpdate();
+	//StateUpdate();
 
+	m_state->Update(this);
 
 	MoveA();
 	

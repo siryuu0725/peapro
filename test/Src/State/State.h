@@ -1,5 +1,7 @@
 #pragma once
 #include "../Object/Object.h"
+class Object;
+
 class State
 {
 public:
@@ -12,6 +14,6 @@ public:
 	virtual void Init(Object* obj) = 0;
 	virtual void Update(Object* obj) = 0;
 protected:
-	static int state_counter;
+	int state_counter;
 };
 
