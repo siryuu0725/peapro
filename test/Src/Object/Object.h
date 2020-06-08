@@ -5,13 +5,8 @@
 #include <d3dx9.h>
 #include "../Engine/Graphics.h"
 #include "../Utility/Collision.h"
+#include "../Data/GameData.h"
 
-enum class State {
-	WAIT,
-	MOVE,
-	CHASE,
-	STATE_MAX_NUM
-};
 
 class Object
 {
@@ -23,12 +18,15 @@ private:
 	struct ObjectInfo
 	{
 		D3DXVECTOR2 posA;
-		D3DXVECTOR2 posB;
+		D3DXVECTOR2 enemey_pos;
 
 		D3DXVECTOR2 vec;
 		TEXTURE_DATA tex;
 
-		int wait_conter;
+		int state_conter;
+
+		D3DXVECTOR2 nor_dir;
+		float move_speed;
 		
 		// ’Ç‰Á
 		State state;
@@ -42,6 +40,11 @@ public:
 
 	void MoveA();
 	void MoveB();
+
+	void Stay();
+	void Move();
+	void Chase();
+
 private:
 	Collision* m_collision;
 };

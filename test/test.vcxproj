@@ -144,6 +144,7 @@
     <ClCompile Include="Src\Utility\Collision.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Src\Data\GameData.h" />
     <ClInclude Include="Src\Engine\Engine.h" />
     <ClInclude Include="Src\Engine\Graphics.h" />
     <ClInclude Include="Src\Engine\Input.h" />
