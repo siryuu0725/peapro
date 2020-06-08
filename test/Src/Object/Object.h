@@ -45,6 +45,8 @@ public:
 	void Move();
 	void Chase();
 
+	void StateChange();
+	void StateUpdate();
 private:
 	Collision* m_collision;
 };

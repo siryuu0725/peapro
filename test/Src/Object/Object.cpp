@@ -30,28 +30,15 @@ void Object::Draw()
 
 void Object::Update()
 {
-	m_obj_info.state_conter++;
 
-	if (m_obj_info.state_conter % 300 == 0)
-	{
-		switch (m_obj_info.state)
-		{
-		case State::WAIT:
-			m_obj_info.state = State::MOVE;
-			break;
-		case State::MOVE:
-			m_obj_info.state = State::CHASE;
-			break;
-		case State::CHASE:
-			m_obj_info.state = State::WAIT;
-			break;
-		default:
-			break;
-		}
-	}
+	StateChange();
+
+	StateUpdate();
+
+
 	MoveA();
 	
-	MoveB();
+	//MoveB();
 }
 
 void Object::Release()
@@ -114,11 +101,62 @@ void Object::Stay()
 
 void Object::Move()
 {
+	m_obj_info.move_speed = 1.5f;
+
 	m_obj_info.enemey_pos.x += m_obj_info.nor_dir.x * m_obj_info.move_speed;
 	m_obj_info.enemey_pos.y += m_obj_info.nor_dir.y * m_obj_info.move_speed;
 }
 
 void Object::Chase()
 {
+	m_obj_info.vec.x = m_obj_info.posA.x - m_obj_info.enemey_pos.x;
+	m_obj_info.vec.y = m_obj_info.posA.y - m_obj_info.enemey_pos.y;
 
+	m_obj_info.vec.x /= sqrtf(m_obj_info.vec.x * m_obj_info.vec.x + m_obj_info.vec.y * m_obj_info.vec.y);
+	m_obj_info.vec.y /= sqrtf(m_obj_info.vec.x * m_obj_info.vec.x + m_obj_info.vec.y * m_obj_info.vec.y);
+
+	m_obj_info.enemey_pos.x += m_obj_info.vec.x * m_obj_info.move_speed;
+	m_obj_info.enemey_pos.y += m_obj_info.vec.y * m_obj_info.move_speed;
+
+}
+
+void Object::StateChange()
+{
+	m_obj_info.state_conter++;
+
+	if (m_obj_info.state_conter % 300 == 0)
+	{
+		switch (m_obj_info.state)
+		{
+		case State::WAIT:
+			m_obj_info.state = State::MOVE;
+			break;
+		case State::MOVE:
+			m_obj_info.state = State::CHASE;
+			break;
+		case State::CHASE:
+			m_obj_info.state = State::WAIT;
+			break;
+		default:
+			break;
+		}
+	}
+}
+
+void Object::StateUpdate()
+{
+	switch (m_obj_info.state)
+	{
+	case State::WAIT:
+		Stay();
+		break;
+	case State::MOVE:
+		Move();
+		break;
+	case State::CHASE:
+		Chase();
+		break;
+	default:
+		break;
+	}
 }
