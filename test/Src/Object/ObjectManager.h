@@ -22,6 +22,8 @@ public:
 	void Release();
 	void AllDeleteObject();
 
+	Object* GetObjInfo() { return m_object; }
+
 protected:
 	ObjectManager();
 	~ObjectManager() {};

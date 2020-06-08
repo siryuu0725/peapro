@@ -27,6 +27,11 @@ private:
 
 		D3DXVECTOR2 nor_dir;
 		float move_speed;
+
+		bool waitflg;
+		bool moveflg;
+		bool chaseflg;
+
 		
 		// ’Ç‰Á
 		OldState state;
@@ -38,6 +43,8 @@ public:
 	void Update();
 	void Release();
 
+	void SetMoveSpeed(float move_speed) { m_obj_info.move_speed = move_speed; }
+
 	void MoveA();
 	void MoveB();
 
@@ -47,6 +54,12 @@ public:
 
 	void StateChange();
 	void StateUpdate();
+
+	void ActiveWait();
+	void ActiveMove();
+	void ActiveChase();
+
+	//void ChangeState(State* state) { m_state = state; }
 private:
 	Collision* m_collision;
 	State* m_state;

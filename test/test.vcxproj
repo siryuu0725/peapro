@@ -141,6 +141,9 @@
     <ClCompile Include="Src\main.cpp" />
     <ClCompile Include="Src\Object\Object.cpp" />
     <ClCompile Include="Src\Object\ObjectManager.cpp" />
+    <ClCompile Include="Src\State\ChaseState.cpp" />
+    <ClCompile Include="Src\State\MoveState.cpp" />
+    <ClCompile Include="Src\State\WaitState.cpp" />
     <ClCompile Include="Src\Utility\Collision.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +154,10 @@
     <ClInclude Include="Src\Engine\Window.h" />
     <ClInclude Include="Src\Object\Object.h" />
     <ClInclude Include="Src\Object\ObjectManager.h" />
+    <ClInclude Include="Src\State\ChaseState.h" />
+    <ClInclude Include="Src\State\MoveState.h" />
+    <ClInclude Include="Src\State\State.h" />
+    <ClInclude Include="Src\State\WaitState.h" />
     <ClInclude Include="Src\Utility\Collision.h" />
     <ClInclude Include="Src\Utility\Vec.h" />
   </ItemGroup>

@@ -1,7 +1,7 @@
 #ifndef DATA_H_
 #define DATA_H_
 
-enum class State {
+enum class OldState {
 	WAIT,
 	MOVE,
 	CHASE,

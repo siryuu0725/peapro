@@ -1,5 +1,9 @@
 #include "Object.h"
 #include "../Engine/Input.h"
+#include "../State/WaitState.h"
+#include "../State/MoveState.h"
+#include "../State/ChaseState.h"
+
 #include <math.h>
 
 Object::Object()
@@ -12,8 +16,15 @@ Object::Object()
 
 	m_obj_info.state_conter = 0;
 
-	m_obj_info.state = State::WAIT;
+	//m_obj_info.state = OldState::WAIT;
+	m_obj_info.waitflg = false;
+	m_obj_info.moveflg = false;
+	m_obj_info.chaseflg = false;
+
+
+	m_state = new WaitState;
 }
+
 
 void Object::Load()
 {
@@ -128,14 +139,14 @@ void Object::StateChange()
 	{
 		switch (m_obj_info.state)
 		{
-		case State::WAIT:
-			m_obj_info.state = State::MOVE;
+		case OldState::WAIT:
+			m_obj_info.state = OldState::MOVE;
 			break;
-		case State::MOVE:
-			m_obj_info.state = State::CHASE;
+		case OldState::MOVE:
+			m_obj_info.state = OldState::CHASE;
 			break;
-		case State::CHASE:
-			m_obj_info.state = State::WAIT;
+		case OldState::CHASE:
+			m_obj_info.state = OldState::WAIT;
 			break;
 		default:
 			break;
@@ -147,16 +158,39 @@ void Object::StateUpdate()
 {
 	switch (m_obj_info.state)
 	{
-	case State::WAIT:
+	case OldState::WAIT:
 		Stay();
 		break;
-	case State::MOVE:
+	case OldState::MOVE:
 		Move();
 		break;
-	case State::CHASE:
+	case OldState::CHASE:
 		Chase();
 		break;
 	default:
 		break;
 	}
 }
+
+void Object::ActiveWait()
+{
+	delete m_state;
+	m_state = new WaitState;
+}
+
+void Object::ActiveMove()
+{
+	delete m_state;
+	m_state = new MoveState;
+}
+
+void Object::ActiveChase()
+{
+	delete m_state;
+	m_state = new ChaseState;
+}
+
+//void Object::ChangeState()
+//{
+//
+//}
