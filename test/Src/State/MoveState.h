@@ -5,8 +5,8 @@ class MoveState :
 	public State
 {
 public:
-	MoveState();
-	~MoveState();
+	MoveState() {};
+	~MoveState() {};
 
 	void Init(Object* obj) override;
 	void Update(Object* obj) override;

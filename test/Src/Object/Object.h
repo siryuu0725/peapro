@@ -6,7 +6,6 @@
 #include "../Engine/Graphics.h"
 #include "../Utility/Collision.h"
 #include "../Data/GameData.h"
-#include "../State/State.h"
 
 class State;
 

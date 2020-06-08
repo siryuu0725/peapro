@@ -1,5 +1,4 @@
 #include "WaitState.h"
-#include "../Object/Object.h"
 #include "MoveState.h"
 
 

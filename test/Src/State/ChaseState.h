@@ -5,8 +5,8 @@ class ChaseState :
 	public State
 {
 public:
-	ChaseState();
-	~ChaseState();
+	ChaseState() {};
+	~ChaseState() {};
 
 	void Init(Object* obj) override;
 	void Update(Object* obj) override;
